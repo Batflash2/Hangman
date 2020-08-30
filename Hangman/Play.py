@@ -6,9 +6,10 @@ run = True
 while run:
     x = pick()
     chance = 7
-
     y = len(x)
     m = []
+    usedChar = ""
+
     while y > 0:
         m.append("_")
         y = y - 1
@@ -17,7 +18,7 @@ while run:
 
     while reset:
         draw(chance)
-        print("\n\n\n\n")
+        print("\n\n")
         if chance == 0:
             print('You have lost')
             print('The answer is:\n', x)
@@ -29,9 +30,12 @@ while run:
         elif m.count('_') > 0:
 
             print("\nYou have", chance, "chances\n")
-            print(m, "\n")
+            print("  ".join(m), "\n\n\n")
+            print("Used Letters:", usedChar)
 
-            z = input("Enter a letter: ")
+            z = input("\n\nEnter a letter: ")
+            usedChar += z + " "
+            
             print("\n\n\n\n\n")
             if x.count(z) > 0:
                 i = 0
