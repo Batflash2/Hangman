@@ -1,3 +1,4 @@
+import os
 from List import pick
 from Draw import draw
 
@@ -17,8 +18,10 @@ while run:
     reset = True
 
     while reset:
+        os.system('cls')
         draw(chance)
         print("\n\n")
+
         if chance == 0:
             print('You have lost')
             print('The answer is:\n', x)
@@ -35,7 +38,7 @@ while run:
 
             z = input("\n\nEnter a letter: ")
             usedChar += z + " "
-            
+
             print("\n\n\n\n\n")
             if x.count(z) > 0:
                 i = 0
