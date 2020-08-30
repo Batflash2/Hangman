@@ -1,4 +1,5 @@
 from List import pick
+from Draw import draw
 
 run = True
 
@@ -15,6 +16,8 @@ while run:
     reset = True
 
     while reset:
+        draw(chance)
+        print("\n\n\n\n")
         if chance == 0:
             print('You have lost')
             print('The answer is:\n', x)
