@@ -30,7 +30,7 @@ while run:
             if again == 'n':
                 run = False
 
-        elif m.count('_') > 0:
+        elif '_' in m:
 
             print("\nYou have", chance, "chances\n")
             print("  ".join(m), "\n\n\n")
@@ -40,7 +40,7 @@ while run:
             usedChar += z + " "
 
             print("\n\n\n\n\n")
-            if x.count(z) > 0:
+            if z in x:
                 i = 0
                 for ch in x:
                     if ch == z:
